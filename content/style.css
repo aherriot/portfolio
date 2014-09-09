@@ -11,15 +11,21 @@ body {
 
 a {
   text-decoration: none;
+  font-weight: bold;
 }
 
 a:link,
 a:visited {
-  color: #f30;
+  color: #073;
+  font-weight: bold;
 }
 
 a:hover {
-  color: #f90;
+  color: #073;
+}
+
+#wrapper {
+  margin: 0 auto;
 }
 
 #main {
@@ -32,6 +38,7 @@ a:hover {
 }
 
 #main h1 {
+  color: #073;
   font-size: 40px;
   font-weight: normal;
 
@@ -46,6 +53,7 @@ a:hover {
   font-size: 15px;
 
   line-height: 20px;
+  text-align: justify;
 }
 
 #main ul, #main ol {
