@@ -1,36 +1,83 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Portfolio <%= @item[:title] %></title>
-    <link rel="stylesheet" href="/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- you don't need to keep this, but it's cool for stats! -->
-    <meta name="generator" content="nanoc <%= Nanoc::VERSION %>">
+    <meta name="description" content="Andrew Herriot's Portfolio">
+    <meta name="author" content="Andrew Herriot">
+
+    <title>Portfolio<%= " - #{@item[:title]}" if @item[:title] %></title>
+
+    <link href="/assets/style/main.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
+
   <body>
-    <div id="wrapper">
-      <div id="main">
-        <%= yield %>
+    <div id="wrapper" class="nav-shown">
+
+      <!-- navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" id="menu-toggle" class="navbar-toggle">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Andrew Herriot's Portfolio</a>
+          </div>
+        </div>
       </div>
+      <!--
+    
+
+      <!-- Sidebar -->
       <div id="sidebar">
-        <ul>
-          <li><a href="/">Home</a></li>
-        </ul>
         <h2>Work</h2>
         <ul>
           <li><a href="/work/highway-three">Highway Three Solutions</a></li>
           <li><a href="/work/loud-technologies">LOUD Technologies</a></li>
           <li><a href="/work/carbonetworks">Carbonetworks</a></li>
         </ul>
-
+        <h2>Volunteer</h2>
+        <ul>
+            <li><a href="/volunteer/cisv">CISV</a></li>
+        </ul>
         <h2>Projects</h2>
         <ul>
-          <li><a href="/projects/angry-martlets">Angry Martlets</a></li>
-          <li><a href="/projects/flashcards">Flashcards</a></li>
-          <li><a href="/projects/recipes">Recipes</a></li>
+            <li><a href="/projects/portfolio">Portfolio</a></li>
+            <li><a href="/projects/angry-martlets">Angry Martlets</a></li>
+            <li><a href="/projects/flashcards">Flashcards</a></li>
+            <li><a href="/projects/recipes">Recipes</a></li>
         </ul>
+
       </div>
+      <!-- /#sidebar-wrapper -->
+
+      <!-- Page Content -->
+      <div id="page-content">
+          <div class="container-fluid">
+              <div class="row">
+                  <div class="col-lg-12">
+                      <%= yield %>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- /#page-content-wrapper -->
+
     </div>
+    <!-- /#wrapper -->
+
+    <script src="//code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="/assets/js/main.js"></script>
   </body>
 </html>

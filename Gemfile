@@ -1,10 +1,15 @@
-# A sample Gemfile
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "kramdown"
-gem "adsf"
+# Static site generator
+gem 'nanoc', '~> 3.6.9'
+gem 'adsf', '~> 1.2.0'
 
-gem "guard"
-gem "guard-nanoc"
+# SASS & cool stuff
+gem 'compass', '~> 0.12.6'
+gem 'bootstrap-sass', '~> 3.1.1'
+
+# Guard
+gem 'guard-nanoc', '~> 1.0.2'
 gem "guard-livereload"
 
+gem 'rb-readline', '~> 0.5.1'

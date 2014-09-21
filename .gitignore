@@ -1,2 +1,4 @@
-/tmp
-/output
+/tmp/
+/output/
+/.sass-cache/
+*.log
