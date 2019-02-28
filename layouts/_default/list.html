@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <h1>{{.Page.Title}}</h1>
+
+  <ul>
+    {{ range .Pages.ByParam "order" }}
+      <li>
+          <a href="{{.URL}}">{{ .Title }}</a>
+      </li>
+
+    {{ end }}
+  </ul>
+{{ end }}
